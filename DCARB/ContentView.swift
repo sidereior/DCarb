@@ -1,3 +1,11 @@
+//
+//  ContentView.swift
+//  DCARB
+//
+//  Created by Alexander Nanda on 10/14/23.
+//
+
+import Foundation
 import SwiftUI
 import AuthenticationServices
 import Firebase
@@ -9,6 +17,7 @@ struct LoginPage: View {
     @State private var email = ""
        @State private var password = ""
        @State private var name = ""
+       @State private var house = ""
        @State private var userIsLoggedIn = false
        @State private var shake = false
        @State private var confirmEmail = ""
@@ -88,7 +97,7 @@ struct LoginPage: View {
     var body: some View {
         ZStack{
             if userIsLoggedIn {
-                //HomeView()
+                HomeView()
             } else {
                 unLogged
                     .onAppear {
@@ -100,12 +109,6 @@ struct LoginPage: View {
                     }
             }
         }
-        .sheet(isPresented: $isShowingWelcomeSheet) {
-            //WelcomeFrameView()
-                }
-                .onAppear {
-                    isShowingWelcomeSheet = true // Show the WelcomeFrameView as a sheet when the LoginPage appears
-                }
         }
     
 
@@ -129,8 +132,8 @@ struct LoginPage: View {
                             .foregroundColor(.black)
                             .offset(x: 1, y: 1)
                     )
-                Text(("PaidPlanet"))
-                    .font(.custom("Avenir-Oblique", size: 32))
+                Text(("DCarb"))
+                    .font(.custom("Avenir-Oblique", size: 55))
                     .fontWeight(.black)
                     .foregroundColor(Color(hex: "1B463C"))
                 
@@ -184,6 +187,17 @@ struct LoginPage: View {
                         .padding(.horizontal, 25)
                         .font(.custom("Avenir", size: 15).bold())
                 }
+                
+                if isSignUpMode {
+                    TextField("What house are you in?", text: $house)
+                        .autocapitalization(.none)
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 10)
+                        .background(Color(hex: "D9D9D9"))
+                        .cornerRadius(14.0)
+                        .padding(.horizontal, 25)
+                        .font(.custom("Avenir", size: 15).bold())
+                }
                         
                 Toggle("Remember Me", isOn: $rememberMe)
                     .toggleStyle(SwitchToggleStyle(tint: Color(hex: "1B463C")))
@@ -225,12 +239,12 @@ struct LoginPage: View {
                     Button(action: {
                         isSignUpMode.toggle()
                     }, label: {
-                        Text(isSignUpMode ? "Already have an account? Log in" : "New to PaidPlanet? Sign up here")
+                        Text(isSignUpMode ? "Already have an account? Log in" : "New to DCarb? Sign up here")
                             .font(.custom("Avenir", size: 20))
                             .fontWeight(.black)
                             .foregroundColor(Color(hex: "D9D9D9"))
                             .overlay(
-                                Text(isSignUpMode ? "Already have an account? Log in" : "New to PaidPlanet? Sign up here")
+                                Text(isSignUpMode ? "Already have an account? Log in" : "New to DCarb? Sign up here")
                                     .font(.custom("Avenir", size: 20))
                                     .fontWeight(.black)
                                     .foregroundColor(.black)

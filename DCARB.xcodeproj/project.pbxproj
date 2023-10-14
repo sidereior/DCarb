@@ -40,7 +40,19 @@
 		067E8B162ADAEEF900203F27 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 067E8B152ADAEEF900203F27 /* FirebaseRemoteConfigSwift */; };
 		067E8B182ADAEEF900203F27 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 067E8B172ADAEEF900203F27 /* FirebaseStorage */; };
 		067E8B1A2ADAEEF900203F27 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 067E8B192ADAEEF900203F27 /* FirebaseStorageCombine-Community */; };
-		067E8B1C2ADAF01500203F27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B1B2ADAF01500203F27 /* ContentView.swift */; };
+		067E8B252ADAF59200203F27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 067E8B242ADAF59200203F27 /* GoogleService-Info.plist */; };
+		067E8B272ADAF75F00203F27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B262ADAF75F00203F27 /* ContentView.swift */; };
+		067E8B292ADAF77B00203F27 /* HomeViiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B282ADAF77B00203F27 /* HomeViiew.swift */; };
+		067E8B2B2ADAF7A700203F27 /* GlowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B2A2ADAF7A700203F27 /* GlowModifier.swift */; };
+		067E8B2D2ADAF8AB00203F27 /* RedeemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B2C2ADAF8AB00203F27 /* RedeemView.swift */; };
+		067E8B2F2ADAF8D000203F27 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B2E2ADAF8D000203F27 /* AddView.swift */; };
+		067E8B312ADAF8E200203F27 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B302ADAF8E200203F27 /* TransactionView.swift */; };
+		067E8B332ADAF8F800203F27 /* ElectricCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B322ADAF8F800203F27 /* ElectricCarView.swift */; };
+		067E8B352ADAF90D00203F27 /* SolarPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B342ADAF90D00203F27 /* SolarPanelView.swift */; };
+		067E8B372ADAF91D00203F27 /* ElectricStoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B362ADAF91D00203F27 /* ElectricStoveView.swift */; };
+		067E8B392ADAF93600203F27 /* OtherSustainableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B382ADAF93600203F27 /* OtherSustainableView.swift */; };
+		067E8B3B2ADAF94A00203F27 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8B3A2ADAF94A00203F27 /* ProfileView.swift */; };
+		067E8B3E2ADAF9B200203F27 /* CITTopTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 067E8B3D2ADAF9B200203F27 /* CITTopTabBar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +82,18 @@
 		067E8AD12ADAE91F00203F27 /* DCARBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCARBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		067E8AD52ADAE91F00203F27 /* DCARBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCARBUITests.swift; sourceTree = "<group>"; };
 		067E8AD72ADAE91F00203F27 /* DCARBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCARBUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		067E8B1B2ADAF01500203F27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		067E8B242ADAF59200203F27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../rand/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		067E8B262ADAF75F00203F27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		067E8B282ADAF77B00203F27 /* HomeViiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViiew.swift; sourceTree = "<group>"; };
+		067E8B2A2ADAF7A700203F27 /* GlowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowModifier.swift; sourceTree = "<group>"; };
+		067E8B2C2ADAF8AB00203F27 /* RedeemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemView.swift; sourceTree = "<group>"; };
+		067E8B2E2ADAF8D000203F27 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		067E8B302ADAF8E200203F27 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		067E8B322ADAF8F800203F27 /* ElectricCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricCarView.swift; sourceTree = "<group>"; };
+		067E8B342ADAF90D00203F27 /* SolarPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarPanelView.swift; sourceTree = "<group>"; };
+		067E8B362ADAF91D00203F27 /* ElectricStoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricStoveView.swift; sourceTree = "<group>"; };
+		067E8B382ADAF93600203F27 /* OtherSustainableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSustainableView.swift; sourceTree = "<group>"; };
+		067E8B3A2ADAF94A00203F27 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +112,7 @@
 				067E8AEE2ADAEEF900203F27 /* FirebaseAppCheck in Frameworks */,
 				067E8AEC2ADAEEF900203F27 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				067E8AF22ADAEEF900203F27 /* FirebaseAuth in Frameworks */,
+				067E8B3E2ADAF9B200203F27 /* CITTopTabBar in Frameworks */,
 				067E8AF62ADAEEF900203F27 /* FirebaseCrashlytics in Frameworks */,
 				067E8B162ADAEEF900203F27 /* FirebaseRemoteConfigSwift in Frameworks */,
 				067E8B082ADAEEF900203F27 /* FirebaseInAppMessaging-Beta in Frameworks */,
@@ -148,8 +172,19 @@
 		067E8AB92ADAE91C00203F27 /* DCARB */ = {
 			isa = PBXGroup;
 			children = (
+				067E8B242ADAF59200203F27 /* GoogleService-Info.plist */,
 				067E8ABA2ADAE91C00203F27 /* DCARBApp.swift */,
-				067E8B1B2ADAF01500203F27 /* ContentView.swift */,
+				067E8B262ADAF75F00203F27 /* ContentView.swift */,
+				067E8B282ADAF77B00203F27 /* HomeViiew.swift */,
+				067E8B2A2ADAF7A700203F27 /* GlowModifier.swift */,
+				067E8B2C2ADAF8AB00203F27 /* RedeemView.swift */,
+				067E8B2E2ADAF8D000203F27 /* AddView.swift */,
+				067E8B302ADAF8E200203F27 /* TransactionView.swift */,
+				067E8B322ADAF8F800203F27 /* ElectricCarView.swift */,
+				067E8B342ADAF90D00203F27 /* SolarPanelView.swift */,
+				067E8B362ADAF91D00203F27 /* ElectricStoveView.swift */,
+				067E8B382ADAF93600203F27 /* OtherSustainableView.swift */,
+				067E8B3A2ADAF94A00203F27 /* ProfileView.swift */,
 				067E8ABE2ADAE91F00203F27 /* Assets.xcassets */,
 				067E8AC02ADAE91F00203F27 /* Preview Content */,
 			);
@@ -225,6 +260,7 @@
 				067E8B152ADAEEF900203F27 /* FirebaseRemoteConfigSwift */,
 				067E8B172ADAEEF900203F27 /* FirebaseStorage */,
 				067E8B192ADAEEF900203F27 /* FirebaseStorageCombine-Community */,
+				067E8B3D2ADAF9B200203F27 /* CITTopTabBar */,
 			);
 			productName = DCARB;
 			productReference = 067E8AB72ADAE91C00203F27 /* DCARB.app */;
@@ -300,6 +336,7 @@
 			mainGroup = 067E8AAE2ADAE91C00203F27;
 			packageReferences = (
 				067E8AE42ADAEEF900203F27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				067E8B3C2ADAF9B200203F27 /* XCRemoteSwiftPackageReference "TopTabBar-iOS-Component" */,
 			);
 			productRefGroup = 067E8AB82ADAE91C00203F27 /* Products */;
 			projectDirPath = "";
@@ -319,6 +356,7 @@
 			files = (
 				067E8AC22ADAE91F00203F27 /* Preview Assets.xcassets in Resources */,
 				067E8ABF2ADAE91F00203F27 /* Assets.xcassets in Resources */,
+				067E8B252ADAF59200203F27 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,8 +381,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				067E8B1C2ADAF01500203F27 /* ContentView.swift in Sources */,
+				067E8B272ADAF75F00203F27 /* ContentView.swift in Sources */,
+				067E8B2B2ADAF7A700203F27 /* GlowModifier.swift in Sources */,
+				067E8B2F2ADAF8D000203F27 /* AddView.swift in Sources */,
+				067E8B372ADAF91D00203F27 /* ElectricStoveView.swift in Sources */,
+				067E8B3B2ADAF94A00203F27 /* ProfileView.swift in Sources */,
 				067E8ABB2ADAE91C00203F27 /* DCARBApp.swift in Sources */,
+				067E8B332ADAF8F800203F27 /* ElectricCarView.swift in Sources */,
+				067E8B2D2ADAF8AB00203F27 /* RedeemView.swift in Sources */,
+				067E8B352ADAF90D00203F27 /* SolarPanelView.swift in Sources */,
+				067E8B312ADAF8E200203F27 /* TransactionView.swift in Sources */,
+				067E8B392ADAF93600203F27 /* OtherSustainableView.swift in Sources */,
+				067E8B292ADAF77B00203F27 /* HomeViiew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +727,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		067E8B3C2ADAF9B200203F27 /* XCRemoteSwiftPackageReference "TopTabBar-iOS-Component" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Coffee-IT-Development/TopTabBar-iOS-Component";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -816,6 +872,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 067E8AE42ADAEEF900203F27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		067E8B3D2ADAF9B200203F27 /* CITTopTabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 067E8B3C2ADAF9B200203F27 /* XCRemoteSwiftPackageReference "TopTabBar-iOS-Component" */;
+			productName = CITTopTabBar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

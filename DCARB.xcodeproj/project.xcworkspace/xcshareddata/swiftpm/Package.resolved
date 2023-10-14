@@ -107,6 +107,15 @@
         "revision" : "3c54ab05249f59f2c6641dd2920b8358ea9ed127",
         "version" : "1.24.0"
       }
+    },
+    {
+      "identity" : "toptabbar-ios-component",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Coffee-IT-Development/TopTabBar-iOS-Component",
+      "state" : {
+        "revision" : "c802a69e45e1648f5296ce12ede3bfde521f401c",
+        "version" : "1.3.3"
+      }
     }
   ],
   "version" : 2

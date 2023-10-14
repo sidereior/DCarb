@@ -1,17 +1,17 @@
-//
-//  DCARBApp.swift
-//  DCARB
-//
-//  Created by Alexander Nanda on 10/14/23.
-//
 
 import SwiftUI
+import Firebase
 
 @main
-struct DCARBApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+struct IOSApp: App {
+
+    init() {
+        FirebaseApp.configure()
     }
+    
+  var body: some Scene {
+    WindowGroup {
+        LoginPage()
+    }
+  }
 }
