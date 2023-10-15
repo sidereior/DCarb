@@ -1,11 +1,3 @@
-//
-//  SolarPanelView.swift
-//  DCARB
-//
-//  Created by Alexander Nanda on 10/14/23.
-//
-
-import Foundation
 import SwiftUI
 import Firebase
 import FirebaseStorage
@@ -71,39 +63,32 @@ struct SolarPanelView: View {
                         Group {
                             Spacer()
                                 .frame(height: 25)
-                            Text("Got Solar?  We just need a couple of things to get you paid...")
+                            Text("Didn't eat meat at dinner?  We just need a picture to get your offset...")
                                 .font(.custom("Avenir", size: 25))
                                 .fontWeight(.black)
                                 .foregroundColor(Color(hex: "00653B"))
                                 .padding(.horizontal, 35)
                                 .padding(.top, 15)
-                            
-                            TextField("First name", text: $firstName)
-                                .autocapitalization(.none)
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 10)
+                         
+                            Button(action: {
+                            currentImageNumber = 1
+                            isShowingImagePicker = true
+                                
+                        }) {
+                            Text("Upload picture!")
+                                .font(.custom("Avenir", size: 20))
+                                .foregroundColor(.green)
+                                .fontWeight(.bold)
+                                .padding()
                                 .background(Color(hex: "00653B"))
-                                .cornerRadius(14.0)
-                                .padding(.horizontal, 25)
-                                .font(.custom("Avenir", size: 20).bold())
-                                .foregroundColor(Color(hex: "F2E8CF"))
-                                .accentColor(.black)
-                            
-                            TextField("Last name", text: $lastName)
-                                .autocapitalization(.none)
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 10)
-                                .background(Color(hex: "00653B"))
-                                .cornerRadius(14.0)
-                                .padding(.horizontal, 25)
-                                .font(.custom("Avenir", size: 20).bold())
-                                .foregroundColor(Color(hex: "F2E8CF"))
-                                .accentColor(.black)
+                                .cornerRadius(14)
+                        }
                             
                             Button(action: {
-                                isShowingNextView = true
+                                
+                                presentationMode.wrappedValue.dismiss()
                             }) {
-                                Text("Next")
+                                Text("Submit!")
                                     .font(.custom("Avenir", size: 20))
                                     .foregroundColor(.blue)
                                     .fontWeight(.bold)
@@ -114,21 +99,12 @@ struct SolarPanelView: View {
                             .padding(.top, 20)
                             .padding(.bottom, 30)
                             .sheet(isPresented: $isShowingNextView, onDismiss: uploadImage) {
-                                
-                                PhotoUploadView(firstName: $firstName,
-                                                lastName: $lastName,
-                                                imagePath1: $imagePath1,
-                                                imagePath2: $imagePath2,
-                                                imagePath3: $imagePath3,
-                                                imagePath4: $imagePath4,
-                                                imagePath5: $imagePath5)
                             }
                         }
-                        
                     }
                     
                     .sheet(isPresented: $isShowingImagePicker, onDismiss: uploadImage) {
-                        CameraPicker(selectedImage: $selectedImage)
+                        ImagePicker(selectedImage: $selectedImage)
                     }
                 }
             }
@@ -292,7 +268,7 @@ struct PhotoUploadView: View {
                     Spacer()
                 }
                 .sheet(isPresented: $isShowingImagePicker, onDismiss: uploadImage) {
-                    CameraPicker(selectedImage: $selectedImage)
+                    ImagePicker(selectedImage: $selectedImage)
                 }
             }
         }
@@ -466,7 +442,7 @@ struct PhotoUploadView2: View {
                     Spacer()
                 }
                 .sheet(isPresented: $isShowingImagePicker, onDismiss: uploadImage) {
-                    CameraPicker(selectedImage: $selectedImage)
+                    ImagePicker(selectedImage: $selectedImage)
                 }
             }
         }
@@ -605,6 +581,8 @@ struct ConfirmTransactionView: View {
                             .padding()
                             .background(Color(hex: "C3E8AC"))
                             .cornerRadius(14)
+                            
+                                                       
                     }
                     .padding(.top, 20)
                     .padding(.trailing, 20)
@@ -622,7 +600,8 @@ struct ConfirmTransactionView: View {
                                 .padding(.top, 15)
                             
                             Text("First Name: \(firstName)")
-                                .font(.custom("Avenir", size: 25)) .fontWeight(.black)
+                                .font(.custom("Avenir", size: 25))
+                                .fontWeight(.black)
                                 .foregroundColor(Color(hex: "00653B"))
                                 .padding(.horizontal, 35)
                                 .padding(.top, 15)
@@ -775,7 +754,7 @@ struct ConfirmTransactionView: View {
                                       progress: "Pending",
                                       amountCO: 0.0,
                                       dollarAmount: 0.0,
-                                      transactionType: "SolarPanels",
+                                      transactionType: "Diet",
                                       email: userEmail)
         
         do {
@@ -791,5 +770,3 @@ struct ConfirmTransactionView: View {
         }
     }
 }
-
-

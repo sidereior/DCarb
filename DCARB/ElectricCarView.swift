@@ -56,38 +56,31 @@ struct ElectricCarView: View {
                         Spacer()
                             .frame(height: 25)
                         
-                        Text("Driving Green! We just need a couple of things to get you paid:")
+                        Text("Took the coach? We just need a picture of your recpeit...")
                             .font(.custom("Avenir", size: 25))
                                 .fontWeight(.black)
                                 .foregroundColor(Color(hex: "00653B"))
                                 .padding(.horizontal, 35)
                                 .padding(.top, 15)
                         
-                        TextField("First name", text: $firstName).autocapitalization(.none)
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 10)
-                                .background(Color(hex: "00653B"))
-                                .cornerRadius(14.0)
-                                .padding(.horizontal, 25)
-                                .font(.custom("Avenir", size: 20).bold())
-                                .foregroundColor(Color(hex: "F2E8CF"))
-                                .accentColor(.black)
-                       
-                        TextField("Last name", text: $lastName)
-                          .autocapitalization(.none)
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 10)
-                                .background(Color(hex: "00653B"))
-                                .cornerRadius(14.0)
-                                .padding(.horizontal, 25)
-                                .font(.custom("Avenir", size: 20).bold())
-                                .foregroundColor(Color(hex: "F2E8CF"))
-                                .accentColor(.black)
-                       
-                        Button(action: {
-                            isShowingNextView = true
+                          Button(action: {
+                            currentImageNumber = 1
+                            isShowingImagePicker = true
+                                
                         }) {
-                            Text("Next")   .font(.custom("Avenir", size: 20))
+                            Text("Upload picture!")
+                                .font(.custom("Avenir", size: 20))
+                                .foregroundColor(.green)
+                                .fontWeight(.bold)
+                                .padding()
+                                .background(Color(hex: "00653B"))
+                                .cornerRadius(14)
+                        }
+
+                                             
+                        Button(action: {
+                        }) {
+                            Text("Submit!")   .font(.custom("Avenir", size: 20))
                                     .foregroundColor(.blue)
                                     .fontWeight(.bold)
                                     .padding()
@@ -716,7 +709,7 @@ struct ElectricConfirmTransactionView: View {
                                       progress: "Pending",
                                       amountCO: 0.0,
                                       dollarAmount: 0.0,
-                                      transactionType: "Electric Car",
+                                      transactionType: "Transportation",
                                       email: userEmail)
         
         do {

@@ -54,33 +54,42 @@ struct ElectricStoveView: View {
                     Group {
                         Spacer()
                             .frame(height: 25)
+                        Text("Order from Hinman?  We just need a picture to get your offset...")
+                            .font(.custom("Avenir", size: 25))
+                            .fontWeight(.black)
+                            .foregroundColor(Color(hex: "00653B"))
+                            .padding(.horizontal, 35)
+                            .padding(.top, 15)
+                     
+                        Button(action: {
+                        currentImageNumber = 1
+                        isShowingImagePicker = true
+                            
+                    }) {
+                        Text("Upload picture!")
+                            .font(.custom("Avenir", size: 20))
+                            .foregroundColor(.green)
+                            .fontWeight(.bold)
+                            .padding()
+                            .background(Color(hex: "00653B"))
+                            .cornerRadius(14)
+                    }
                         
-                        Text("Cooking Green! 🥗 We just need a couple of things to get you paid: ")
-                             .font(.custom("Avenir", size: 25))
-                                .fontWeight(.black)
-                                .foregroundColor(Color(hex: "00653B"))
-                                .padding(.horizontal, 35)
-                                .padding(.top, 15)
-
-                        TextField("First name", text: $firstName)         .autocapitalization(.none)
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 10)
-                                .background(Color(hex: "00653B"))
-                                .cornerRadius(14.0)
-                                .padding(.horizontal, 25)
-                                .font(.custom("Avenir", size: 20).bold())
-                                .foregroundColor(Color(hex: "F2E8CF"))
-                                .accentColor(.black)
+                        Button(action: {
+                            
+                            presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Text("Submit!")
+                                .font(.custom("Avenir", size: 20))
+                                .foregroundColor(.blue)
+                                .fontWeight(.bold)
+                                .padding()
+                                .background(Color(hex: "C3E8AC"))
+                                .cornerRadius(14)
+                        }
                         
-                        TextField("Last name", text: $lastName).autocapitalization(.none)
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 10)
-                                .background(Color(hex: "00653B"))
-                                .cornerRadius(14.0)
-                                .padding(.horizontal, 25)
-                                .font(.custom("Avenir", size: 20).bold())
-                                .foregroundColor(Color(hex: "F2E8CF"))
-                                .accentColor(.black)
+                        
+                        
                                                     
                         Button(action: {
                             isShowingNextView = true
@@ -698,7 +707,7 @@ struct ElectricStoveConfirmTransactionView: View {
                                       progress: "Pending",
                                       amountCO: 0.0,
                                       dollarAmount: 0.0,
-                                      transactionType: "Electric Stove",
+                                      transactionType: "Packages",
                                       email: userEmail)
         
         do {

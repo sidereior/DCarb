@@ -16,8 +16,8 @@ import FirebaseFirestoreSwift
 struct LoginPage: View {
     @State private var email = ""
        @State private var password = ""
-       @State private var name = ""
-       @State private var house = ""
+       @State public var name = ""
+       @State public var house = ""
        @State private var userIsLoggedIn = false
        @State private var shake = false
        @State private var confirmEmail = ""
@@ -132,7 +132,7 @@ struct LoginPage: View {
                             .foregroundColor(.black)
                             .offset(x: 1, y: 1)
                     )
-                Text(("DCarb"))
+                Text(("D-Carb"))
                     .font(.custom("Avenir-Oblique", size: 55))
                     .fontWeight(.black)
                     .foregroundColor(Color(hex: "1B463C"))
@@ -239,12 +239,12 @@ struct LoginPage: View {
                     Button(action: {
                         isSignUpMode.toggle()
                     }, label: {
-                        Text(isSignUpMode ? "Already have an account? Log in" : "New to DCarb? Sign up here")
+                        Text(isSignUpMode ? "Already have an account? Log in" : "New to D-Carb? Sign up here")
                             .font(.custom("Avenir", size: 20))
                             .fontWeight(.black)
                             .foregroundColor(Color(hex: "D9D9D9"))
                             .overlay(
-                                Text(isSignUpMode ? "Already have an account? Log in" : "New to DCarb? Sign up here")
+                                Text(isSignUpMode ? "Already have an account? Log in" : "New to D-Carb? Sign up here")
                                     .font(.custom("Avenir", size: 20))
                                     .fontWeight(.black)
                                     .foregroundColor(.black)

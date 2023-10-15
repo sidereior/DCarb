@@ -24,12 +24,13 @@ struct TransactionsView: View {
             ScrollView {
                 VStack {
                     
+                    Spacer().frame(height:25)
                     VStack(alignment: .leading, spacing: 10){
                         Spacer()
                             .frame(height: 5)
                         
                         HStack{
-                            Text("Total Transactions: ")
+                            Text("Total Reports: ")
                              .fontWeight(.black)
                              .foregroundColor(Color(hex: "7D5E35"))
                             
@@ -40,13 +41,13 @@ struct TransactionsView: View {
                             .font(.title)
                        
                         HStack{
-                            Text("Total CO2 Offset: ")
-                                .font(.subheadline)
+                            Text("Total Carbon Saved: ")
+                                .font(.title2 )
                                 .foregroundColor(Color(hex: "7D5E35"))
                                 .fontWeight(.black)
                             
-                            Text("\(String(format: "%.2f", totalCO2Amount)) tons of CO2")
-                                .font(.subheadline)
+                            Text("\(String(format: "%.2f", totalCO2Amount)) kg of CO2")
+                                .font(.title2)
                                 .foregroundColor(Color(hex: "00653B"))
                                 .fontWeight(.black)
 
@@ -136,7 +137,7 @@ struct TransactionCardView: View {
                 
                 Spacer()
                  
-                if(transaction.transactionType.contains("Car"))
+                if(transaction.transactionType.contains("Diet"))
                 {
                  Image("car")
                     .resizable()
@@ -145,7 +146,7 @@ struct TransactionCardView: View {
                     .frame(width: 50, height: 50)
                     .colorInvert()
                 }
-                else if(transaction.transactionType.contains("Solar"))
+                else if(transaction.transactionType.contains("Transportation"))
                 {
                  Image("solar")
                     .resizable()
@@ -155,7 +156,7 @@ struct TransactionCardView: View {
                     .colorInvert()
    
                 }
-                else if(transaction.transactionType.contains("Stove"))
+                else if(transaction.transactionType.contains("Packages"))
                 {
                   Image("stove")
                     .resizable()
@@ -201,16 +202,16 @@ struct TransactionCardView: View {
                 .foregroundColor(Color(hex: "AACB96"))
                 .fontWeight(.bold)
             
-            if(transaction.dollarAmount.isEqual(to: 0.0))
+            if(transaction.amountCO.isEqual(to: 0.0))
             {
-                Text("Dollar Amount: Transaction is still being reviewed.")
+                Text("CO2 Amount (kg): Log is still being reviewed.")
                     .font(.subheadline)
                     .foregroundColor(Color(hex: "AACB96"))
                     .fontWeight(.bold)
             }
             else
             {
-                Text("Dollar Amount: \(String(format: "%.2f", transaction.dollarAmount))")
+                Text("CO2 Amount (kg): \(String(format: "%.2f", transaction.dollarAmount))")
                     .font(.subheadline)
                     .foregroundColor(Color(hex: "D1AD7D"))
                     .fontWeight(.bold)

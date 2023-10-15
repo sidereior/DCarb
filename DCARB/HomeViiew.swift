@@ -29,7 +29,7 @@ struct HomeView: View {
             selectedIconColorOverride: Color(hex: "00653B")
         ),
         .init(
-            title: "Profile",
+            title: "Info",
             icon: .init(systemName: "person.crop.square.fill"),
             iconColorOverride: Color(hex: "7D5E35"),
             selectedIconColorOverride: Color(hex: "00653B")
@@ -38,7 +38,7 @@ struct HomeView: View {
 
     var config: CITTopTabBarView.Configuration {
         var example: CITTopTabBarView.Configuration = .exampleUnderlined
-        example.tabViewSpacing = 40
+        example.widthMode = CITTopTabBarWidthMode.fixed
         example.textColor = Color(hex: "7D5E35")
         example.backgroundColor = Color.white.opacity(0.0)
         example.underlineColor = Color(hex: "00653B")
@@ -48,22 +48,21 @@ struct HomeView: View {
         example.iconSize = CGSize(width: 30, height: 30)
         example.showUnderline = true
         example.showBorderWhileUnselected = false
-        example.selectedInsets = .init(top: 0, leading: 0, bottom: 10, trailing: 0)
-        example.underlineHeight = 3
+        example.underlineHeight = 4
         return example
     }
 
     var body: some View {
         VStack {
             //CITTopTabBarView(selectedTab: $selectedTab, tabs: $tabs, config: config)
-
+           
             TabView(selection: $selectedTab) {
                 AddView()
                     .tag(0)
-
+                
                 TransactionsView()
                     .tag(1)
-
+                
                 ProfileView()
                     .tag(2)
             }
@@ -71,7 +70,6 @@ struct HomeView: View {
             .edgesIgnoringSafeArea(.all)
             
             CITTopTabBarView(selectedTab: $selectedTab, tabs: $tabs, config: config)
-                .padding(.bottom, 10)
         }
         .background(Color(hex: "F2E8CF"))
         .preferredColorScheme(.dark)

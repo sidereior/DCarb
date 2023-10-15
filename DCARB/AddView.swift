@@ -20,9 +20,21 @@ struct AddView: View {
         ZStack {
             ScrollView {
                 VStack {
-                    
+                   
+                    Spacer().frame(height:25)
+                     var greeting: String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        if (6..<12).contains(hour) {
+            return "Good Morning"
+        } else if (12..<18).contains(hour) {
+            return "Good Afternoon"
+        } else {
+            return "Good Evening"
+        }
+    }
                     HStack{
-                        Text("Do you own and use:")
+                        Text(greeting + ",\n select a sustainable action")
                          .fontWeight(.black)
                          .foregroundColor(Color(hex: "7D5E35"))
                     }
@@ -38,7 +50,7 @@ struct AddView: View {
                             isShowingSolarPanels = true
                         }) {
                             HStack{
-                                Text("Solar Panels")
+                                Text("Diet")
                                     .font(.title)
                                     .fontWeight(.black)
                                     .foregroundColor(Color(hex: "C3E8AC"))
@@ -72,7 +84,7 @@ struct AddView: View {
                             isShowingElectricCars = true
                         }) {
                             HStack{
-                                Text("Electric Cars")
+                                Text("Transportation")
                                     .font(.title)
                                     .fontWeight(.black)
                                     .foregroundColor(Color(hex: "C3E8AC"))
@@ -105,7 +117,7 @@ struct AddView: View {
                             isShowingElectricStoves = true
                         }) {
                             HStack{
-                                Text("Electric Stoves")
+                                Text("Packages")
                                     .font(.title)
                                     .fontWeight(.black)
                                     .foregroundColor(Color(hex: "C3E8AC"))

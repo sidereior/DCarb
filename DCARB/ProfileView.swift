@@ -12,9 +12,11 @@ import Firebase
 struct ProfileView: View {
     @StateObject private var userManager = UserManager()
     @State private var isShowingResetPasswordAlert = false
-
+    
     var body: some View {
         VStack {
+            
+                    Spacer().frame(height:25)
             var greeting: String {
                 let hour = Calendar.current.component(.hour, from: Date())
 
@@ -36,17 +38,41 @@ struct ProfileView: View {
                         .background(Color(hex: "D1AD7D"))
                         .cornerRadius(10)
                         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                        .padding(.bottom, 10)
+                        .padding(10)
+            
+            
+            HStack{
+                Text("Email: ")
+                .font(.title)
+                        .padding()
+                 .fontWeight(.black)
+                         .foregroundColor(Color(hex: "7D5E35"))
+                Text("\(userManager.user?.email ?? "")")
+                    .font(.caption)//shirnk
+                        .padding()
+                
+            }
+            .padding()
+                        .background(Color(hex: "D1AD7D"))
+                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                        .cornerRadius(10)
+           
+            HStack{
+                Text("House: ")
+                .font(.title)
+                        .padding()
+                 .fontWeight(.black)
+                         .foregroundColor(Color(hex: "7D5E35"))
+                Text(" North Park")
+                        .padding()
+                
+            }
+            .padding()
+                        .background(Color(hex: "D1AD7D"))
+                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                        .cornerRadius(10)
 
             
-            Text("Email: \(userManager.user?.email ?? "")")
-                        .font(.title)
-                        .padding()
-                        .background(Color(hex: "D1AD7D"))
-                        .cornerRadius(10)
-                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                        .padding(.bottom, 10)
-
             Button(action: {
                 isShowingResetPasswordAlert = true
             }) {
@@ -55,7 +81,7 @@ struct ProfileView: View {
                         .background(Color(hex: "D1AD7D"))
                         .cornerRadius(10)
                         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                        .padding(.bottom, 10)
+                        .padding( 10)
                                 }
             .alert(isPresented: $isShowingResetPasswordAlert) {
                 Alert(
